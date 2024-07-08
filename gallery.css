@@ -1,0 +1,115 @@
+/* General Styles */
+body {
+    font-family: 'Times New Roman', Times, serif; /* Updated font style */
+    background-color: #d4e7f3; /* Updated background color to light blue */
+    color: #003366; /* Updated text color to dark blue */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 20px 0;
+    font-size: 3em; /* Font size remains the same */
+    color: #003366; /* Updated color to dark blue */
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-family: 'Tahoma', sans-serif; /* Updated font style */
+}
+
+/* Gallery Styles */
+#gallery {
+    width: 90%;
+    margin: 20px auto;
+    background: #eaeaea; /* Updated background color of gallery to light grey */
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+figure {
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    border: 3px solid #003366; /* Updated frame color to dark blue */
+    transition: transform 0.3s ease;
+}
+
+figcaption {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff; /* Text color remains white for readability */
+    padding: 10px 15px;
+    border-radius: 3px;
+    font-size: 1em;
+    transition: background 0.3s ease;
+    font-family: 'Times New Roman', Times, serif; /* Updated font style */
+}
+
+figcaption:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+ul li {
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+ul li:hover {
+    transform: scale(1.1);
+}
+
+ul li img {
+    cursor: pointer;
+    border-radius: 5px;
+    border: 3px solid #003366; /* Updated frame color to dark blue */
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* CSS filter for grayscale thumbnails */
+ul li img.inactive {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease; /* Added transition for grayscale effect */
+}
+
+ul li img.active {
+    filter: none;
+    border: 3px solid #003366; /* Updated frame color to dark blue */
+}
+
+ul li img:hover {
+    transform: scale(1.1);
+    filter: none;
+}
+
+/* Subtle animation for the featured image */
+figure img {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
